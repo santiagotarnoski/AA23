@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 550px;
+    margin: 40px auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #1a252f;
+    margin-bottom: 15px;
+}
+
+.nav-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-tab {
+    padding: 10px 20px;
+    border: none;
+    background-color: #e2e8f0;
+    color: #4a5568;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-tab.active, .btn-tab:hover {
+    background-color: #3182ce;
+    color: white;
+}
+
+.card-view {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card-view h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #2b6cb0;
+    border-bottom: 2px solid #ebf8ff;
+    padding-bottom: 8px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #3182ce;
+    box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.2);
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-primary { background-color: #3182ce; color: white; width: 100%; }
+.btn-primary:hover { background-color: #2b6cb0; }
+
+.btn-success { background-color: #38a169; color: white; width: 100%; }
+.btn-success:hover { background-color: #2f855a; }
+
+.btn-secondary { background-color: #4a5568; color: white; }
+.btn-secondary:hover { background-color: #2d3748; }
+
+.btn-danger { background-color: #e53e3e; color: white; }
+.btn-danger:hover { background-color: #c53030; }
+
+.mensaje-box {
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-bottom: 18px;
+    display: none;
+}
+
+.mensaje-box.error {
+    background-color: #fff5f5;
+    color: #c53030;
+    border: 1px solid #feb2b2;
+    display: block;
+}
+
+.mensaje-box.exito {
+    background-color: #f0fff4;
+    color: #276749;
+    border: 1px solid #9ae6b4;
+    display: block;
+}
+
+.mensaje-box.info {
+    background-color: #ebf8ff;
+    color: #2c5282;
+    border: 1px solid #90cdf4;
+    display: block;
+}
+
+.oculto { display: none !important; }
+
+/* PANEL PROTEGIDO */
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.user-card {
+    background-color: #f7fafc;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #3182ce;
+}
+
+.highlight { color: #2b6cb0; }
+
+.badge {
+    background-color: #e2e8f0;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.status-online { color: #38a169; font-weight: bold; }
+.divider { margin: 25px 0; border: 0; border-top: 1px solid #e2e8f0; }
+.admin-actions h3 { font-size: 16px; margin-bottom: 8px; }
+.admin-actions p { font-size: 14px; color: #718096; margin-bottom: 15px; }
+
+#estado-sesion { margin-bottom: 18px; color: #4a5568; }
+#btn-volver-panel { margin-bottom: 18px; }
+.highlight, #user-email, .badge { overflow-wrap: anywhere; }
+button:disabled { opacity: .6; cursor: wait; }
+button:focus-visible { outline: 3px solid #90cdf4; outline-offset: 3px; }
+@media (max-width: 480px) {
+    body { padding: 16px; }
+    .container { margin: 20px auto; }
+    .card-view { padding: 22px; }
+    .panel-header { flex-direction: column; align-items: stretch; gap: 12px; }
+    .nav-tabs { flex-wrap: wrap; }
+}
